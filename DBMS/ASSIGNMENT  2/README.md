@@ -1,0 +1,1 @@
+17-26.sql is not finished dont write or bother to do until i remove this text !
