@@ -18,7 +18,9 @@ DBMS LAB 📊 -
 | 4  | [ASSIGNMENT 3](https://github.com/BEASTgg/5thsem/tree/main/DBMS/ASSIGNMENT%203) |
 
 
-NOTE - ALL OUTPUTS SHOULD BE PRINT OUT NO HANDWRITTEN !
+NOTE 1 - ALL OUTPUTS SHOULD BE PRINT OUT NO HANDWRITTEN FOR CSE CORE
+
+NOTE 2 - ALL OUTPUTS SHOULD BE HANDWRITTEN NO PRINTOUT FOR CSE IOT and CSE AIML
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SOFTWARE LAB 💻 -
