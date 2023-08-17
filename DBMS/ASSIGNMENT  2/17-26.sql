@@ -25,12 +25,12 @@ SELECT l_name as LasT, salary + 100 AS Incremented_salary FROM employee;
 -- 23. Show the emp_id, f_name, l_name, job_type of the employee getting highest salary.
 
 SELECT emp_id, f_name, l_name, job_type FROM employee
-WHERE salary = MAX(salary);
+WHERE salary = (SELECT MAX(salary) FROM employee);
 
 -- 24. Show the emp_id, f_name, l_name, job_type of the employee getting minimum salary.
 
 SELECT emp_id, f_name, l_name, job_type FROM employee
-WHERE salary = MIN(salary);
+WHERE salary = (SELECT MIN(salary) FROM employee);
 
 -- 25. Show the average salary of employees in the employee table.
 
