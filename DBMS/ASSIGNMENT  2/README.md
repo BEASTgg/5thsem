@@ -1,1 +1,4 @@
-17-26.sql is not finished dont write or bother to do until i remove this text !
+# Write upto 25 for now 26 i will fix later and 26 is not completed so dont write it !
+
+
+# ALSO THE OUT PDF CONTAINS UPTO 25 IF UR IN HURRY PRINT IT OR ELSE WAIT FOR ME TO UPLOAD ANATHER PDF WITH NUMBER 26 , I WILL DO IT SOON AND WILL ALSO COMPLETE THE NUMBER 26 IN 17-26.sql FILE !!
