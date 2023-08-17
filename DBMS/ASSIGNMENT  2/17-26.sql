@@ -8,7 +8,7 @@ SELECT d_name, d_loc from department;
 
 -- 19. Show the employees f_name , l_name , salary and the salary after 1000rs Bonus.
 
-SELECT f_name, l_name, salary, salary + 1000 AS salary_with_bonus FROM employees;
+SELECT f_name, l_name, salary, salary + 1000 AS salary_with_bonus FROM employee;
 
 -- 20. Show the employees annual salary with a 1000rs. Yearly bonus and the annual salary with a 100rs Monthly bonus.
 
