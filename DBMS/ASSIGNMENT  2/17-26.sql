@@ -20,7 +20,7 @@ SELECT f_name as NAME, salary * 12 AS ANNSAL FROM employee;
 
 -- 22. Show the l_name as LasT AND 100rs. Incremented salary as NewSal.
 
-SELECT l_name as LasT, salary + 100 AS Incremented_salary FROM employee;
+SELECT l_name as LasT, salary + 100 AS NewSal FROM employee;
 
 -- 23. Show the emp_id, f_name, l_name, job_type of the employee getting highest salary.
 
