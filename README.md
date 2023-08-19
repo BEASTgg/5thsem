@@ -1,4 +1,4 @@
-For [syllebus](https://github.com/BEASTgg/5thsem/tree/main/Syllebus) click 💁‍♂️
+For [SYLLABUS](https://github.com/BEASTgg/5thsem/tree/main/Syllebus) click 💁‍♂️
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Disclaimer :warning: :
