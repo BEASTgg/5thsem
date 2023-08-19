@@ -4,7 +4,7 @@ SELECT * FROM department;
 
 -- 18. Select the department names and their locations.
 
-SELECT d_name, d_loc from department;
+SELECT d_name, d_loc FROM department;
 
 -- 19. Show the employees f_name , l_name , salary and the salary after 1000rs Bonus.
 
