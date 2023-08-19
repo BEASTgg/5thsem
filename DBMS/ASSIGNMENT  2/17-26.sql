@@ -72,7 +72,7 @@ CREATE TABLE owns (
 CREATE TABLE participated (
     driver_id char(20) NOT NULL PRIMARY KEY,
     regno char(20),
-    report_number char(20),
+    report_number int(20),
     damage_amount int(20)
 );
 
