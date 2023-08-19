@@ -16,7 +16,7 @@ SELECT f_name, l_name, salary, salary + 1000 AS annual_salary_with_bonus, salary
 
 -- 21. Show f_name as NAME and annual salary as ANNSAL from the employee table.
 
-SELECT f_name as NAME, salary * 12 as ANNSAL FROM employee;
+SELECT f_name as NAME, salary * 12 AS ANNSAL FROM employee;
 
 -- 22. Show the l_name as LasT AND 100rs. Incremented salary as NewSal.
 
