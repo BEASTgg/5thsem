@@ -104,7 +104,7 @@ VALUES
 INSERT INTO accident
 VALUES
 (1, '2011-07-15', 'Intersection A'),
-(2, '2006-08-05', 'Highway B'),
+(12, '2006-08-05', 'Highway B'),
 (3, '2010-06-20', 'Street C'),
 (4, '2007-07-02', 'Road D'),
 (5, '2013-08-10', 'Avenue E');
@@ -120,7 +120,7 @@ VALUES
 INSERT INTO participated
 VALUES
 ('D1', 'ABC123', 1, 5000),
-('D2', 'DEF456', 2, 8000),
+('D2', 'DEF456', 12, 8000),
 ('D3', 'GHI789', 1, 3000),
 ('D4', 'JKL012', 3, 2000),
 ('D5', 'MNO345', 4, 6000);
