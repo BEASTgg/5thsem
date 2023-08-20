@@ -4,13 +4,11 @@ SELECT f_name, l_name, job_type FROM employee;
 
 -- 2. Show employee details in the following fashion:
 
-SELECT CONCAT(f_name, ' is a ', dept) AS Employee_Details FROM employee
-WHERE f_name = 'Arun';
+SELECT CONCAT(f_name, ' is a ', dept) AS Employee_Details FROM employee;
 
 -- 3. Show the monthly salary details in the following fashion
 
-SELECT CONCAT(f_name, '''s monthly salary is Rs ', salary) AS Monthly_Salary_Details FROM employee
-WHERE f_name = 'Arun';
+SELECT CONCAT(f_name, '''s monthly salary is Rs ', salary) AS Monthly_Salary_Details FROM employee;
 
 -- 4. Show the different department names from department table.
 
@@ -29,7 +27,7 @@ WHERE salary > 50000;
 -- 7. Show the details of the employee whose manager id is not 1.
 
 SELECT *FROM employee
-WHERE manager_id != 1;
+WHERE manager_id != 1 OR manager_id IS NULL;
 
 -- 8. Show the employee details whose salary ranges between 40000 and 70000.
 
