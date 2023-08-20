@@ -129,7 +129,7 @@ VALUES
 
 UPDATE participated
 SET damage_amount = 25000
-WHERE regno = 'ABC123' AND report_number = 12;
+WHERE regno = 'DEF456' AND report_number = 12;
 
 INSERT INTO accident (report_number, date, location)
 VALUES (6, '2006-09-01', 'Street F');
