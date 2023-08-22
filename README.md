@@ -8,7 +8,7 @@ The handler(s) of this repository will not be responsible for any wrong assignme
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
------> IF YOU ARE HAVING ISSUES VIEWING/UPLOADING PDF PLEASE USE A LAPTOP/DESKTOP FOR OPENING IT ! <-----
+-----> IF YOU ARE HAVING ISSUES VIEWING/DOWNLOADING PDF PLEASE USE A LAPTOP/DESKTOP FOR OPENING IT ! <-----
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
