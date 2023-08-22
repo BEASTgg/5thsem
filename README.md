@@ -6,6 +6,8 @@ For [syllabus](https://github.com/BEASTgg/5thsem/tree/main/Syllebus) click 💁�
 The handler(s) of this repository will not be responsible for any wrong assignments and/or any other discrepencies caused on your end.
 
 
+# If ur having issues viewing/downloading pdf please use a LAPTOP/DESKTOP for viewing it !
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 DBMS LAB 📊 -
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
