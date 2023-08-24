@@ -21,6 +21,7 @@ DBMS LAB 📊 -
 | 2  | [ASSIGNMENT 2](https://github.com/BEASTgg/5thsem/tree/main/DBMS/ASSIGNMENT%20%202) |
 | 3  | [ASSIGNMENT 1A](https://github.com/BEASTgg/5thsem/tree/main/DBMS/ASSIGNMENT%201A) |
 | 4  | [ASSIGNMENT 3](https://github.com/BEASTgg/5thsem/tree/main/DBMS/ASSIGNMENT%203) |
+| 5  | [ASSIGNMENT 4](https://github.com/BEASTgg/5thsem/tree/main/DBMS/Assignment%204) |
 
 :anger: FACULTY PREFERS TO USE ORACLE SQL / SQL PLUS / LIVE SQL WHICH IS ANNONYING FOR A LOT OF REASONS :rage: ! DOING IN MYSQL IS BETTER AND PREFERABLE :sparkling_heart: BUT MAKE A NOTE THAT IN TIME OF PRACTICAL WE HAVE TO DO IT IN ORACLE  :exclamation: SO BE PREPARED  :exclamation:
 
