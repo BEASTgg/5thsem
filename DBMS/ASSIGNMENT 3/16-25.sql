@@ -36,4 +36,7 @@ SELECT DISTINCT job_type, SUM(salary) AS Total_salary FROM employee GROUP BY job
 
 -- 25. Display the name of the department having maximum average salary.
 
-SELECT dept FROM employee GROUP BY dept HAVING ABS(AVG(salary) - (SELECT MAX(avg_salary) FROM (SELECT AVG(salary) AS avg_salary FROM employee GROUP BY dept) emp_tab)) < 0.001;
+SELECT dept FROM employee GROUP BY dept
+HAVING AVG(salary) = (SELECT AVG(salary) FROM employee
+GROUP BY dept ORDER BY AVG(salary) DESC
+LIMIT 1);
