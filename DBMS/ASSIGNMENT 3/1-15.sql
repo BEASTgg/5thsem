@@ -4,7 +4,7 @@ SELECT f_name, l_name, job_type FROM employee;
 
 -- 2. Show employee details in the following fashion:
 
-SELECT CONCAT(f_name, ' is a ', dept) AS Employee_Details FROM employee;
+SELECT CONCAT(f_name, ' is a ', job_type) AS Employee_Details FROM employee;
 
 -- 3. Show the monthly salary details in the following fashion
 
