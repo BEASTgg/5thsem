@@ -50,7 +50,7 @@ SELECT TO_CHAR(TO_DATE('2023-01-25', 'YYYY-MM-DD'), 'Month DD - YYYY') AS to_cha
 
 
 
--- From this point Onwards it will work in MYSQL --
+-- From this point Onwards it will work in MYSQL too --
 
 
 
