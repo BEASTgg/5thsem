@@ -77,8 +77,8 @@ SELECT emp_id, f_name, salary, dept,
     CASE 
         WHEN salary BETWEEN 0 AND 19999 THEN 0
         WHEN salary BETWEEN 20000 AND 39999 THEN salary * 0.09
-        WHEN salary BETWEEN 40000 AND 59999 THEN salary * 0.20
-        WHEN salary BETWEEN 60000 AND 79999 THEN salary * 0.30
+        WHEN salary BETWEEN 40000 AND 59999 THEN salary * 0.2
+        WHEN salary BETWEEN 60000 AND 79999 THEN salary * 0.3
         ELSE salary * 0.45
     END AS tax
 FROM employee WHERE dept = 'Production';
