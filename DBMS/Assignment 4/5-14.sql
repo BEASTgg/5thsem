@@ -123,7 +123,7 @@ FULL OUTER JOIN department ON employee.dept = department.d_name;
 -- 13. Write a query to find the address.
 
 SELECT locations.location_id, locations.street_address, locations.city, locations.state_province, countries.country_name FROM locations
-NATURAL JOIN contries ON locations.street_address = contries.country_name;
+NATURAL JOIN contries ON locations.country_id = contries.country_id;
 
 -- 14. Write a query to find the name.
 
