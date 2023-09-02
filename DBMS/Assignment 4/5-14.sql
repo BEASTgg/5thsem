@@ -97,27 +97,27 @@ JOIN department ON employee.dept = department.d_name;
 
 --k. Natural join
 
-SELECT employee.f_name, employee.l_name, department.d_loc FROM employee
+SELECT *FROM employee
 NATURAL JOIN department ON employee.dept = department.d_name;
 
 -- l. Inner join
 
-SELECT employee.f_name, employee.l_name, department.d_loc FROM employee
+SELECT *FROM employee
 INNER JOIN department ON employee.dept = department.d_name;
 
 -- m. Left outer join
 
-SELECT employee.f_name, employee.l_name, department.d_loc FROM employee
+SELECT *FROM employee
 LEFT OUTER JOIN department ON employee.dept = department.d_name;
 
 -- n. Right outer join
 
-SELECT employee.f_name, employee.l_name, department.d_loc FROM employee
+SELECT *FROM employee
 RIGHT OUTER JOIN department ON employee.dept = department.d_name;
 
 -- o. Full outer join
 
-SELECT employee.f_name, employee.l_name, department.d_loc FROM employee
+SELECT *FROM employee
 FULL OUTER JOIN department ON employee.dept = department.d_name;
 
 -- 13. Write a query to find the address.
