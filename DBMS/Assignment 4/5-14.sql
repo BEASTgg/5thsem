@@ -98,7 +98,7 @@ JOIN department ON employee.dept = department.d_name;
 --k. Natural join
 
 SELECT *FROM employee
-NATURAL JOIN department ON employee.dept = department.d_name;
+NATURAL JOIN department;
 
 -- l. Inner join
 
