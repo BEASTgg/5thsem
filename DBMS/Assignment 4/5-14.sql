@@ -117,6 +117,16 @@ RIGHT OUTER JOIN department ON employee.dept = department.d_name;
 
 -- o. Full outer join
 
+-- FOR MYSQL -
+
+SELECT *FROM employee
+LEFT OUTER JOIN department ON employee.dept = department.d_name
+UNION
+SELECT *FROM employee
+RIGHT OUTER JOIN department ON employee.dept = department.d_name;
+
+-- FOR ORACLE SQL -
+
 SELECT *FROM employee
 FULL OUTER JOIN department ON employee.dept = department.d_name;
 
