@@ -87,7 +87,7 @@ VALUES
 -- a. Natural join
 
 SELECT *FROM employee
-NATURAL JOIN department ON employee.dept = department.d_name;
+NATURAL JOIN department;
 
 -- b. Inner join
 
