@@ -65,8 +65,13 @@ VALUES
 
 -- 8. Display the employee names with their respective job grades and salary.
 
-SELECT employee.f_name, employee.l_name, Job_Grades.GRADE, Job_Grades.LOWEST_SAL, Job_Grades.HIGHEST_SAL, employee.salary FROM employee
-JOIN Job_Grades;
+SELECT f_name, salary,
+    CASE 
+        WHEN salary BETWEEN 10000 AND 24999 THEN 'A'
+        WHEN salary BETWEEN 25000 AND 49999 THEN 'B'
+        WHEN salary BETWEEN 50000 AND 100000 THEN 'C'
+    END AS Job_Grades
+FROM employee;
 
 -- 9. Insert two rows in Employee table having ‘NULL’ values in dept field.
 
