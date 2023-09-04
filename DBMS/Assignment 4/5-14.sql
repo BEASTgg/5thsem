@@ -56,20 +56,11 @@ SELECT TO_CHAR(TO_DATE('2023-01-25', 'YYYY-MM-DD'), 'Month DD - YYYY') AS to_cha
 
 -- 8. Show the employee details with a revised salary. The salary is incremented in the following way:
 
--- a. 10% for sales department
-
-SELECT emp_id, f_name, l_name, job_type, (salary + (salary * 0.1)) AS revised_salary, commission, dept, manager_id, date_of_joining FROM employee
-WHERE dept = 'Sales';
-
--- b. 20% for marketing department
-
-SELECT emp_id, f_name, l_name, job_type, (salary + (salary * 0.2)) AS revised_salary, commission, dept, manager_id, date_of_joining FROM employee
-WHERE dept = 'Marketing';
-
--- c. No increment for others
-
-SELECT *FROM employee
-WHERE dept != 'Sales' AND dept != 'Marketing';
+UPDATE employee SET salary = CASE
+    WHEN dept = 'Sales' THEN salary * 0.1
+    WHEN dept = 'Marketing' THEN salary * 0.2
+    else salary * 1
+END;
 
 -- 9. Determine the tax for each employee in production department based on the monthly salary. The tax rate are as per the following data:
 
