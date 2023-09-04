@@ -121,7 +121,7 @@ RIGHT OUTER JOIN department ON employee.dept = department.d_name;
 SELECT *FROM employee
 FULL OUTER JOIN department ON employee.dept = department.d_name;
 
--- 13. Write a query to find the address.  -> Confusion !
+-- 13. Write a query to find the address.  -> incomplete QS
 
 SELECT locations.location_id, locations.street_address, locations.city, locations.state_province, countries.country_name FROM locations
 NATURAL JOIN countries ON locations.country_id = countries.country_id;
