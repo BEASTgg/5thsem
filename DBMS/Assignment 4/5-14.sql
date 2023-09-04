@@ -59,7 +59,7 @@ SELECT TO_CHAR(TO_DATE('2023-01-25', 'YYYY-MM-DD'), 'Month DD - YYYY') AS to_cha
 UPDATE employee SET salary = CASE
     WHEN dept = 'Sales' THEN salary * 0.1
     WHEN dept = 'Marketing' THEN salary * 0.2
-    else salary * 1
+    ELSE salary * 1
 END;
 
 -- 9. Determine the tax for each employee in production department based on the monthly salary. The tax rate are as per the following data:
