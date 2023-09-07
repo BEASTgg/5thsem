@@ -43,11 +43,11 @@ SOFTWARE LAB 💻 -
 
 | No. | Subject |
 | --- | --- |
-| 1 | [Constitution of India](/Notes/DBMS/) |
-| 2 | [Database Management Systems](/Notes/Software/) |
-| 3 | [Formal Language & Automata Theory](/Notes/Software/) |
-| 4 | [Image Processing](/Notes/Software/) |
-| 5 | [Principles of Management](/Notes/Software/) |
-| 6 | [Signals & Systems](/Notes/Software/) |
-| 7 | [Software Engineering](/Notes/Software/) |
+| 1 | [Constitution of India](/Notes/Constitution of India/) |
+| 2 | [Database Management Systems](/Notes/Database Management Systems/) |
+| 3 | [Formal Language & Automata Theory](/Notes/Formal Language & Automata Theory/) |
+| 4 | [Image Processing](/Notes/Image Processing/) |
+| 5 | [Principles of Management](/Notes/Principles of Management/) |
+| 6 | [Signals & Systems](/Notes/Signals & Systems/) |
+| 7 | [Software Engineering](/Notes/Software Engineering/) |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
