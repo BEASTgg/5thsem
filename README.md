@@ -43,6 +43,11 @@ SOFTWARE LAB 💻 -
 
 | No. | Subject |
 | --- | --- |
-| 1 | [DBMS](/Notes/DBMS/) |
-| 2 | [SOFTWARE](/Notes/Software/) |
+| 1 | [Constitution of India](/Notes/DBMS/) |
+| 2 | [Database Management Systems](/Notes/Software/) |
+| 3 | [Formal Language & Automata Theory](/Notes/Software/) |
+| 4 | [Image Processing](/Notes/Software/) |
+| 5 | [Principles of Management](/Notes/Software/) |
+| 6 | [Signals & Systems](/Notes/Software/) |
+| 7 | [Software Engineering](/Notes/Software/) |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
