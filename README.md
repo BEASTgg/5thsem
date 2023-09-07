@@ -47,7 +47,7 @@ SOFTWARE LAB 💻 -
 | 2 | [Database Management Systems + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Database%20Management%20Systems) |
 | 3 | [Formal Language & Automata Theory + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Formal%20Language%20%26%20Automata%20Theory) |
 | 4 | [Image Processing](Notes/Image Processing/) |
-| 5 | [Principles of Management](Notes/Principles of Management/) |
-| 6 | [Signals & Systems](Notes/Signals & Systems/) |
-| 7 | [Software Engineering](Notes/Software Engineering/) |
+| 5 | [Principles of Management](https://github.com/BEASTgg/5thsem/tree/main/Notes/Principles%20of%20Management/previous%20year%20notes) |
+| 6 | [Signals & Systems + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Signals%20%26%20Systems) |
+| 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering ) |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
