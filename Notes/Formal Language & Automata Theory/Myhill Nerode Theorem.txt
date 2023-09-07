@@ -1,0 +1,30 @@
+
+
+
+The Myhill Nerode theorem is a fundamental result coming down to the theory of languages. This theory was proven by John Myhill and Anil Nerode in 1958. It is used to prove whether or not a language L is regular and it is also used  for minimization of states in DFA( Deterministic Finite Automata). 
+
+To understand this theorem, first we need to understand what Indistinguishability is :
+
+Given a language L and x,y are string over ∑*, if for every string z ∈ ∑*, xz, yz ∈ L or xz, yz ∉ L then x and y are said to be indistinguishable over language L. Formally, we denote that x and y are indistinguishable over L by the following notation : x ≡L y. 
+
+ ≡L is an equivalence relation as it is :
+
+1) Reflexive : For all string x, xz ∈ L if  xz ∈ L therefore x ≡L x.
+
+2) Symmetric : Suppose  x ≡L y. This means either xz, yz ∈ L or xz, yz ∉ L for all z ∈ ∑*. Equivalently this means yz,xz  ∈ L or yz, xz ∉ L for all z ∈ ∑* which implies y ≡L x 
+
+3) Transitive : Suppose  x ≡L y and y ≡L w. Then suppose for the sake of contradiction that x and w are not indistinguishable. This means there must exist some z such that exactly one of xz and wz is a member of L. Assume xz is a member of L and wz is not a member of L. xz ∈ L implies yz ∈ L. wz ∉ L implies that yz ∉ L. This is a contradiction since yz cannot both a member and not be a member of L. Therefore x ≡L y and y ≡L w ⇒ x ≡L w.
+
+Since ≡L is an equivalence relation over ∑*, ≡L partitions ∑* into disjoint sets called equivalence classes.
+
+Myhill Nerode Theorem :
+
+A language is regular if and only if ≡L partitions ∑* into finitely many equivalence classes. If ≡L partitions ∑* into n equivalence classes, then a minimal DFA recognizing L has exactly n states. 
+
+Example :
+
+To prove that L = {anbn | n ≥ 0} is not regular.
+
+We can show that L has infinitely many equivalence classes by showing that ak and ai are distinguishable by L whenever k ≠ i. Thus, for x = ak and y = ai we let z = bk. Then xz = akbk  is in the language but yz = aibk is not. Thus, each equivalence class of L can contain at most one string of the form ai so there must be infinitely many equivalence classes. That means L is not regular by the Myhill Nerode theorem.
+
+Note : To prove whether or not a language L is regular is also done using Pumping Lemma, the distinction between this and Myhill Nerode theorem is that, there are some non-regular language satisfying the Pumping Lemma but no such non regular language is there which satisfies Myhill Nerode theorem.
