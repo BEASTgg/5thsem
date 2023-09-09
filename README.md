@@ -36,7 +36,7 @@ SOFTWARE LAB 💻 -
 | No  | ASSIGNMENT |
 | ------------- | ------------- |
 | 1  | [ASSIGNMENT 1 - UNIQUE FOR EVERYONE DIY !] |
-| 2  | [ASSIGNMENT 2](https://github.com/BEASTgg/5thsem/tree/main/DBMS/ASSIGNMENT%201) |
+| 2  | [ASSIGNMENT 2](https://github.com/BEASTgg/5thsem/tree/main/SOFTWARE/ASSIGNMENT%202) |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Notes 📜 -
