@@ -32,7 +32,9 @@ DBMS LAB 📊 -
 
 NOTE 1 - ALL OUTPUTS SHOULD BE PRINT OUT NO HANDWRITTEN FOR CSE CORE
 
-NOTE 2 - ALL OUTPUTS SHOULD BE HANDWRITTEN NO PRINTOUT FOR CSE IOT and CSE AIML
+NOTE 2 - ALL OUTPUTS SHOULD BE HANDWRITTEN OR PRINTOUT FOR CSE IOT
+
+NOTE 3 - ALL OUTPUTS SHOULD BE HANDWRITTEN NO PRINTOUT FOR CSE AIML
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SOFTWARE LAB 💻 -
