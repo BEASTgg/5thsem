@@ -78,8 +78,7 @@ SELECT DEPARTMENT, COUNT(*) AS NO_OF_EMPLOYEE FROM Worker GROUP BY DEPARTMENT;
 
 -- 17. Write An SQL Query To Print The Name Of Employees Having The Highest Salary In Each Department.
 
-SELECT FIRST_NAME FROM Worker GROUP BY DEPARTMENT
-WHERE SALARY = (SELECT MAX(SALARY) FROM Worker GROUP BY DEPARTMENT);
+
 
 -- 18. Write An SQL Query To Fetch Departments Along With The Total Salaries Paid For Each Of Them.
 
