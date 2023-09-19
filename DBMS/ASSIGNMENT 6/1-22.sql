@@ -59,7 +59,9 @@ WHERE row_num % 2 != 0;
 
 -- 13. Write An SQL Query To Show Records From One Table That Another Table Does Not Have.
 
-
+SELECT Worker.* FROM Worker
+LEFT JOIN Title ON Worker.WORKER_ID = Title.WORKER_REF_ID             -- NOT WORKING !
+WHERE Title.WORKER_REF_ID IS NULL;
 
 -- 14. Write An SQL Query To Show The Top N (Say 10) Records Of A Table.
 
@@ -70,7 +72,7 @@ SELECT TOP 10 *FROM Worker;    -- For ORACLE
 
 -- 15. Write An SQL Query To Fetch The List Of Employees With The Same Salary.
 
-
+SELECT SALARY, COUNT(*) AS WorkerCount FROM Worker GROUP BY SALARY;      -- LIST OF WORKER have to SHOW !
 
 -- 16. Write An SQL Query To Show All Departments Along With The Number Of People Working There.
 
@@ -82,17 +84,96 @@ SELECT DEPARTMENT, COUNT(*) AS NO_OF_EMPLOYEE FROM Worker GROUP BY DEPARTMENT;
 
 -- 18. Write An SQL Query To Fetch Departments Along With The Total Salaries Paid For Each Of Them.
 
-
+SELECT DEPARTMENT, SUM(SALARY) FROM Worker GROUP BY DEPARTMENT;
 
 -- 19. Consider the following relations for an order processing database application in a company.
 
 -- i) Create the above tables by properly specifying the primary keys and the foreign keys.
+                                                     -- FOREIGN KEY REFERENCING LEFT !
+CREATE TABLE CUSTOMER(
+  Cust int(25) NOT NULL PRIMARY KEY,
+  Cname char(25),
+  City char(25)
+);
 
+CREATE TABLE ORDER(
+  Order int(25) NOT NULL PRIMARY KEY,
+  Odate date,
+  Cust int(25),
+  Ord-Amt int(25)
+);
 
+CREATE TABLE ORDER_ITEM(
+  Order int(25) NOT NULL PRIMARY KEY,
+  Item int(25),
+  qty int(25)
+);
+
+CREATE TABLE ITEM(
+  Item int(25),
+  Unit_Price int(25)
+);
+
+CREATE TABLE SHIPMENT(
+  Order int(25) NOT NULL PRIMARY KEY,
+  Warehouse int(25),
+  Ship_Date date
+);
+
+CREATE TABLE WAREHOUSE(
+  Warehouse int(25),
+  City char(25)
+);
 
 -- ii) Enter at least five tuples for each relation.
 
+INSERT INTO CUSTOMER
+VALUES
+(234, 'Jake', 'Kolkata'),
+(345, 'Paul', 'Varanashi'),
+(626, 'Robie', 'Noida'),
+(328, 'Mischel', 'Delhi'),
+(457, 'Marie', 'Jadavpur');
 
+INSERT INTO ORDER
+VALUES
+(100, '2023-06-13', 234),
+(101, '2023-01-04', 345),
+(102, '2023-02-24', 626),
+(103, '2023-05-27', 328),
+(104, '2023-07-09', 457);
+
+INSERT INTO ORDER_ITEM
+VALUES
+(100, 627593, 12),
+(100, 125694, 34),
+(100, 245676, 56),
+(100, 847235, 76),
+(100, 964356, 36);
+
+INSERT INTO ITEM
+VALUES
+(627593, 25000),
+(627593, 45000),
+(627593, 35000),
+(627593, 15000),
+(627593, 75000);
+
+INSERT INTO SHIPMENT
+VALUES
+(100, 3546, 'kolkata'),
+(102, 7546, 'Varanashi'),
+(103, 2453, 'Noida'),
+(104, 6432, 'Delhi'),
+(105, 2423, 'Jadavpur');
+
+INSERT INTO WAREHOUSE
+VALUES
+(24, 'kolkata'),
+(57, 'Varanashi'),
+(87, 'Noida'),
+(38, 'Delhi'),
+(94, 'Jadavpur');
 
 -- iii) Produce a listing: CUSTNAME, NO_OF_ORDERS, AVG_ORDER_AMT, where the middle column is the total number of orders by the customer and the last column is the average order amount for that customer
 
@@ -104,21 +185,31 @@ SELECT DEPARTMENT, COUNT(*) AS NO_OF_EMPLOYEE FROM Worker GROUP BY DEPARTMENT;
 
 -- v) Demonstrate how you delete Item# 10 from the ITEM table and make that field null in the ORDER- ITEM table.
 
+
+
 -- 20. Create a table Emp(e_no, e_name, e_phone, e_addr,e_salary) to store records of 10 employees:
 
 -- i) Alter the data type of e_no from number to varchar
 
-
+ALTER TABLE Emp
+MODIFY e_no VARCHAR(50); 
 
 -- ii) Alter table by setting e_no as primary key
 
-
+ALTER TABLE Emp
+ADD CONSTRAINT PK PRIMARY KEY (e_no);
 
 -- iii) Alter table by adding a column e_pin
 
-
+ALTER TABLE Emp
+ADD e_pin VARCHAR(25);
 
 -- iv) Update the phone number of an employee in the table
+
+UPDATE Emp
+SET e_phone = '8648798872'
+WHERE e_no = '100';
+
 
 -- 21. Create a table Dept(dept_no, dept_name,e_no, dept_loc,dept_hod) to store records of 10 departments:
 
@@ -128,10 +219,16 @@ SELECT DEPARTMENT, COUNT(*) AS NO_OF_EMPLOYEE FROM Worker GROUP BY DEPARTMENT;
 
 -- ii) Assign dept_no as primary key.
 
-
+ALTER TABLE Dept
+ADD CONSTRAINT PK PRIMARY KEY (dept_no);
 
 -- iii) Update the dept_hod for one department.
 
-
+UPDATE Emp
+SET dept_hod = 'Ameer'
+WHERE dept_no = '100';
 
 -- iv) Delete one department
+
+DELETE FROM Dept
+WHERE dept_no = '110';
