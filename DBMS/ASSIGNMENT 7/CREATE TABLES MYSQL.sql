@@ -5,7 +5,7 @@ CREATE TABLE Employee(
     Job_type varchar(10),
     Salary int(10),
     Commission int(10),
-    Dept int(10),
+    Dept varchar(20),
     Manager_id int(10),
     DOJ varchar(25)
 );
