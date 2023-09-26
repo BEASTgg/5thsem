@@ -23,6 +23,8 @@ VALUES
 
 -- 2. Display the previous and current job_types of all the employees.
 
+
+
 -- 3. Display the previous and current department and job_types of all the employees.
 
 
