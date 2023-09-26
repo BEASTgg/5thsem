@@ -7,7 +7,7 @@ CREATE TABLE Employee(
     Commission int(10),
     Dept int(10),
     Manager_id int(10),
-    DOJ date
+    DOJ varchar(25)
 );
 
 
@@ -42,8 +42,8 @@ VALUES
 
 CREATE TABLE Job_History (
     Emp_id int(10),
-    Start_date date,
-    End_date date,
+    Start_date varchar(25),
+    End_date varchar(25),
     Job_type varchar(20),
     D_name varchar(20)
 );
