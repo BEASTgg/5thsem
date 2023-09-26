@@ -13,17 +13,17 @@ CREATE TABLE Employee(
 
 INSERT INTO Employee
 VALUES
-(1,'Arun', 'Khan', 'Manager', 90000, NULL ,'Production', '', '04-Jan-1998'),
-(2,'Barun', 'Kumar', 'Manager', 80000, NULL ,'Marketing', '', '09-Feb-1998'),
+(1,'Arun', 'Khan', 'Manager', 90000, NULL ,'Production', NULL, '04-Jan-1998'),
+(2,'Barun', 'Kumar', 'Manager', 80000, NULL ,'Marketing', NULL, '09-Feb-1998'),
 (3,'Chitra', 'Kapoor', 'Engineer', 60000, NULL ,'Production', 1, '08-Jan-1998'),
 (4,'Dheeraj', 'Mishra', 'Manager', 75000, NULL ,'Sales', 4, '27-Dec-2001'),
 (5,'Emma', 'Dutt', 'Engineer', 55000, NULL ,'Production', 1, '2-Mar-2002'),
-(6,'Floki', 'Dutt', 'Accountant', 70000, NULL ,'Accounts', '', '16-Jul-2000'),
+(6,'Floki', 'Dutt', 'Accountant', 70000, NULL ,'Accounts', NULL , '16-Jul-2000'),
 (7,'Dheeraj', 'Kumar', 'Clerk', 40000, NULL ,'Accounts', 6, '01-Jul-2016'),
-(8,'Saul', 'Good', 'Engineer', 60000, NULL ,'R&D', '', '06-Sep-2014'),
+(8,'Saul', 'Good', 'Engineer', 60000, NULL ,'R&D', NULL , '06-Sep-2014'),
 (9,'Mou', 'Bhat', 'Clerk', 30000, NULL ,'Sales', 4, '08-Mar-2018'),
 (10,'Sunny', 'Deol', 'Salesman', 20000, 10000,'Marketing', 2, '31-Mar-2001'),
-(11,'Bobby', 'Deol', 'Engineer', 35000, '' ,'R&D', 8, '17-Oct-2017'),
+(11,'Bobby', 'Deol', 'Engineer', 35000, NULL ,'R&D', 8, '17-Oct-2017'),
 (12,'Aamir', 'Khan', 'Salesman', 15000, 5000,'Marketing', 2, '11-Jan-2013');
 
 CREATE TABLE Department( 
