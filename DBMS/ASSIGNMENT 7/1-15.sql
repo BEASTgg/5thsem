@@ -23,3 +23,78 @@ VALUES
 
 -- 2. Display the previous and current job_types of all the employees.
 
+-- 3. Display the previous and current department and job_types of all the employees.
+
+
+
+-- 4. Display the employee id and job_types of the employees who currently have a job title that they held previously.
+
+
+
+-- 5. Find the name of those employees who have not changed their jobs once.
+
+
+
+-- 6. Find the names of the employees who earn more than Chitra.
+
+
+
+-- 7. Find the details of those employees who have the same job_type as of emp_id 7.
+
+
+
+-- 8. Find the details of the employees whose job_type is same as that of emp_id 3 and whose salary is greater than that of emp_id 7.
+
+
+
+-- 9. Display l_name, job_type and the salary of the employees whose salary is equal to the minimum salary.
+
+
+
+-- 10. Find the job_type with lowest average salary.
+
+
+
+-- 11. Display all the departments that have a minimum salary greater than that of ‘Sales’ department.
+
+
+
+-- 12. Find the employees who earn the same salary for each department.
+
+
+
+-- 13. Display the employees who are not engineers and whose salary is less than that of any engineer.
+
+
+
+-- 14. Display the employees whose salary is less than the salary of all employees with a job_type ‘Clerk’ and whose job_type is not ‘Clerk’.
+
+
+
+-- 15. Consider the following database of students enrollment in courses and books adopted for each course.
+
+-- STUDENT(regno: string, name: string, major: strong, bdate: date)
+-- COURSE(course-no: int cname: string, dept: string)
+-- ENROLL(reg-no: string, course-no: int, sem: int, marks: int)
+-- BOOK-ADOPTION(course-no: int, sem: int, book-isbn: int)
+-- TEXT(book-isbn: int, book-title: string, publisher: string, author: string)
+
+-- i) Create the above tables by properly specifying the primary keys and the foreign keys
+
+
+
+-- ii) Enter atleast five tuples for each relation.
+
+
+
+-- iii) Demonstrate how you add a new text book to the database and make this book be adopted by some department.
+
+
+
+-- iv) Produce a list of text books (include Course-no, book-isbn, book-title) in the alphabetical order for courses offered by the ‘Compute Science’ department that use more than two books.
+
+
+
+-- v) List any department that has all its adopted books published by a specific publisher.
+
+
