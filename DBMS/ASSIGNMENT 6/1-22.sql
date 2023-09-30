@@ -215,7 +215,22 @@ WHERE e_no = '100';
 
 -- i) Create the reference between Emp and Dept table with e_no attribute.
 
+CREATE TABLE Dept(
+    dept_no int(25) NOT NULL PRIMARY KEY,
+    dept_name varchar(25),
+    e_no int(25),
+    dept_loc char(25),
+    dept_hod char(25)
+);
 
+CREATE TABLE Emp(
+    e_no int(25),
+    e_name varchar(25),
+    e_phone int(25),
+    e_addr varchar(25),
+    e_salary int(25),
+    CONSTRAINT fk_Emp FOREIGN KEY (e_no) REFERENCES Dept(e_no)
+);
 
 -- ii) Assign dept_no as primary key.
 
