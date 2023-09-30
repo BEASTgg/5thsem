@@ -99,7 +99,38 @@ WHERE salary < (SELECT MIN(salary) FROM employee WHERE job_type = 'Clerk') AND j
 
 -- i) Create the above tables by properly specifying the primary keys and the foreign keys
 
+CREATE TABLE STUDENT(
+    regno char(25),
+    name char(25),
+    major char(25),
+    bdate date
+);
 
+CREATE TABLE COURSE(
+    course_no int(25),
+    cname char(25),
+    dept char(25)
+);
+
+CREATE TABLE ENROLL(
+    reg_no char(25),
+    course_no int(25),
+    sem int(25),
+    marks int(25)
+);
+
+CREATE TABLE BOOK_ADOPTION(
+    course_no int(25),
+    sem int(25),
+    book_isbn int(25)
+);
+
+CREATE TABLE TEXT(
+    book_isbn int(25),
+    book_title char(25),
+    publisher char(25),
+    author char(25)
+;)
 
 -- ii) Enter atleast five tuples for each relation.
 
