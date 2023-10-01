@@ -192,7 +192,7 @@ WHERE City = 'Kolkata';
 -- v) Demonstrate how you delete Item# 10 from the ITEM table and make that field null in the ORDER- ITEM table.
 
 DELETE FROM ITEM WHERE Item = 10;
-UPDATE ITEM SET Item = NULL WHERE ItemID = 10;
+UPDATE ORDERR_ITEM SET Item = NULL WHERE Item = 10;
 
 -- 20. Create a table Emp(e_no, e_name, e_phone, e_addr,e_salary) to store records of 10 employees:
 
