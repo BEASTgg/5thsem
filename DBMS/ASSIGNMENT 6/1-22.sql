@@ -59,9 +59,9 @@ WHERE row_num % 2 != 0;
 
 -- 13. Write An SQL Query To Show Records From One Table That Another Table Does Not Have.
 
-SELECT Worker.* FROM Worker
-LEFT JOIN Title ON Worker.WORKER_ID = Title.WORKER_REF_ID             -- NOT WORKING !
-WHERE Title.WORKER_REF_ID IS NULL;
+SELECT * FROM worker
+LEFT JOIN bonus ON worker.worker_id = bonus.worker_ref_id
+WHERE bonus.worker_ref_id IS NULL;
 
 -- 14. Write An SQL Query To Show The Top N (Say 10) Records Of A Table.
 
@@ -72,7 +72,8 @@ SELECT TOP 10 *FROM Worker;    -- For ORACLE
 
 -- 15. Write An SQL Query To Fetch The List Of Employees With The Same Salary.
 
-SELECT SALARY, COUNT(*) AS WorkerCount FROM Worker GROUP BY SALARY;      -- LIST OF WORKER have to SHOW !
+SELECT first_name,salary FROM worker 
+WHERE Salary IN (SELECT Salary FROM worker GROUP BY Salary HAVING COUNT(*) > 1);
 
 -- 16. Write An SQL Query To Show All Departments Along With The Number Of People Working There.
 
@@ -80,7 +81,7 @@ SELECT DEPARTMENT, COUNT(*) AS NO_OF_EMPLOYEE FROM Worker GROUP BY DEPARTMENT;
 
 -- 17. Write An SQL Query To Print The Name Of Employees Having The Highest Salary In Each Department.
 
-SELECT department, CONCAT(FIRST_NAME, ' ', LAST_NAME) AS EmployeeName, MAX(SALARY) FROM Worker GROUP BY department;
+SELECT department, CONCAT(FIRST_NAME, ' ', LAST_NAME) AS EmployeeName, MAX(SALARY) FROM Worker GROUP BY department;    -- Giving error!
 
 -- 18. Write An SQL Query To Fetch Departments Along With The Total Salaries Paid For Each Of Them.
 
