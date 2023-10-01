@@ -89,22 +89,23 @@ SELECT DEPARTMENT, SUM(SALARY) FROM Worker GROUP BY DEPARTMENT;
 -- 19. Consider the following relations for an order processing database application in a company.
 
 -- i) Create the above tables by properly specifying the primary keys and the foreign keys.
-                                                     -- FOREIGN KEY REFERENCING LEFT !
+ 
 CREATE TABLE CUSTOMER(
   Cust int(25) NOT NULL PRIMARY KEY,
   Cname char(25),
   City char(25)
 );
 
-CREATE TABLE ORDER(
-  Order int(25) NOT NULL PRIMARY KEY,
+CREATE TABLE ORDERR(
+  Orderr int(25) NOT NULL PRIMARY KEY,
   Odate date,
   Cust int(25),
-  Ord-Amt int(25)
+  Ord_Amt int(25),
+  FOREIGN KEY (Cust) REFERENCES CUSTOMER(Cust)
 );
 
-CREATE TABLE ORDER_ITEM(
-  Order int(25) NOT NULL PRIMARY KEY,
+CREATE TABLE ORDERR_ITEM(
+  Orderr int(25) NOT NULL PRIMARY KEY,
   Item int(25),
   qty int(25)
 );
@@ -115,14 +116,15 @@ CREATE TABLE ITEM(
 );
 
 CREATE TABLE SHIPMENT(
-  Order int(25) NOT NULL PRIMARY KEY,
-  Warehouse int(25),
+  Orderr int(25),
+  Warehouse int(25) NOT NULL PRIMARY KEY,
   Ship_Date date
 );
 
 CREATE TABLE WAREHOUSE(
   Warehouse int(25),
-  City char(25)
+  City char(25),
+  FOREIGN KEY (Warehouse) REFERENCES SHIPMENT(Warehouse)
 );
 
 -- ii) Enter at least five tuples for each relation.
@@ -135,21 +137,21 @@ VALUES
 (328, 'Mischel', 'Delhi'),
 (457, 'Marie', 'Jadavpur');
 
-INSERT INTO ORDER
+INSERT INTO ORDERR
 VALUES
-(100, '2023-06-13', 234),
-(101, '2023-01-04', 345),
-(102, '2023-02-24', 626),
-(103, '2023-05-27', 328),
-(104, '2023-07-09', 457);
+(100, '2023-06-13', 234, 5600),
+(101, '2023-01-04', 345, 45673),
+(102, '2023-02-24', 626, 9564),
+(103, '2023-05-27', 328, 3563),
+(104, '2023-07-09', 457, 8543);
 
-INSERT INTO ORDER_ITEM
+INSERT INTO ORDERR_ITEM
 VALUES
 (100, 627593, 12),
-(100, 125694, 34),
-(100, 245676, 56),
-(100, 847235, 76),
-(100, 964356, 36);
+(101, 125694, 34),
+(102, 245676, 56),
+(103, 847235, 76),
+(104, 964356, 36);
 
 INSERT INTO ITEM
 VALUES
@@ -161,19 +163,19 @@ VALUES
 
 INSERT INTO SHIPMENT
 VALUES
-(100, 3546, 'kolkata'),
-(102, 7546, 'Varanashi'),
-(103, 2453, 'Noida'),
-(104, 6432, 'Delhi'),
-(105, 2423, 'Jadavpur');
+(100, 3546, '2023-01-16'),
+(101, 7546, '2023-04-02'),
+(102, 2453, '2023-01-20'),
+(103, 6432, '2023-06-11'),
+(104, 2423, '2023-07-09');
 
 INSERT INTO WAREHOUSE
 VALUES
-(24, 'kolkata'),
-(57, 'Varanashi'),
-(87, 'Noida'),
-(38, 'Delhi'),
-(94, 'Jadavpur');
+(3546, 'kolkata'),
+(7546, 'Varanashi'),
+(2453, 'Noida'),
+(6432, 'Delhi'),
+(2423, 'Jadavpur');
 
 -- iii) Produce a listing: CUSTNAME, NO_OF_ORDERS, AVG_ORDER_AMT, where the middle column is the total number of orders by the customer and the last column is the average order amount for that customer
 
