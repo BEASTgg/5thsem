@@ -81,7 +81,7 @@ SELECT DEPARTMENT, COUNT(*) AS NO_OF_EMPLOYEE FROM Worker GROUP BY DEPARTMENT;
 
 -- 17. Write An SQL Query To Print The Name Of Employees Having The Highest Salary In Each Department.
 
-SELECT department, CONCAT(FIRST_NAME, ' ', LAST_NAME) AS EmployeeName, MAX(SALARY) FROM Worker GROUP BY department;    -- Giving error!
+SELECT department, first_name, salary FROM ( SELECT department, first_name, salary, ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) AS rn FROM worker) ranked;
 
 -- 18. Write An SQL Query To Fetch Departments Along With The Total Salaries Paid For Each Of Them.
 
@@ -215,30 +215,16 @@ ADD e_pin VARCHAR(25);
 -- iv) Update the phone number of an employee in the table
 
 UPDATE Emp
-SET e_phone = '8648798872'
-WHERE e_no = '100';
+SET e_phone = '86487988'
+WHERE e_no = '5';
 
 
 -- 21. Create a table Dept(dept_no, dept_name,e_no, dept_loc,dept_hod) to store records of 10 departments:
 
 -- i) Create the reference between Emp and Dept table with e_no attribute.
 
-CREATE TABLE Dept(
-    dept_no int(25) NOT NULL PRIMARY KEY,
-    dept_name varchar(25),
-    e_no int(25),
-    dept_loc char(25),
-    dept_hod char(25)
-);
-
-CREATE TABLE Emp(
-    e_no int(25),
-    e_name varchar(25),
-    e_phone int(25),
-    e_addr varchar(25),
-    e_salary int(25),
-    FOREIGN KEY (e_no) REFERENCES Dept(e_no)
-);
+ALTER TABLE Dept 
+ADD CONSTRAINT FK FOREIGN KEY (e_no) REFERENCES Emp(e_no);
 
 -- ii) Assign dept_no as primary key.
 
@@ -247,23 +233,25 @@ ADD CONSTRAINT PK PRIMARY KEY (dept_no);
 
 -- iii) Update the dept_hod for one department.
 
-UPDATE Emp
-SET dept_hod = 'Ameer'
-WHERE dept_no = '100';
+UPDATE Dept
+SET dept_hod = 'Rajju'
+WHERE dept_no = '20';
 
 -- iv) Delete one department
 
 DELETE FROM Dept
-WHERE dept_no = '110';
+WHERE dept_no = '20';
 
 -- 22. Solve the following queries
 
 -- i) Write a query to find the employee name and dept_hod whose dept_hod is SAY, “John”.
 
-SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS EmployeeName, dept_hod FROM employee
-WHERE dept_hod = 'John';
+SELECT emp.e_name AS EmployeeName, dept.dept_hod FROM emp
+JOIN Dept ON emp.e_no = dept.e_no
+WHERE dept_hod = 'Rajdip';
 
 -- ii) Write a query to find the average salary of the employee of CSE department.
 
-SELECT AVG(salary) AS Average_Salary FROM employee
-WHERE dept = 'CSE';
+SELECT AVG(emp.e_salary) AS average_salary FROM emp
+JOIN Dept ON emp.e_no = dept.e_no
+WHERE dept_name = 'CSE';
