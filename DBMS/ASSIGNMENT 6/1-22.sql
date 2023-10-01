@@ -89,7 +89,7 @@ SELECT DEPARTMENT, SUM(SALARY) FROM Worker GROUP BY DEPARTMENT;
 -- 19. Consider the following relations for an order processing database application in a company.
 
 -- i) Create the above tables by properly specifying the primary keys and the foreign keys.
- 
+
 CREATE TABLE CUSTOMER(
   Cust int(25) NOT NULL PRIMARY KEY,
   Cname char(25),
@@ -147,19 +147,19 @@ VALUES
 
 INSERT INTO ORDERR_ITEM
 VALUES
-(100, 627593, 12),
-(101, 125694, 34),
-(102, 245676, 56),
-(103, 847235, 76),
-(104, 964356, 36);
+(100, 10, 12),
+(101, 11, 34),
+(102, 12, 56),
+(103, 13, 76),
+(104, 14, 36);
 
 INSERT INTO ITEM
 VALUES
-(627593, 25000),
-(627593, 45000),
-(627593, 35000),
-(627593, 15000),
-(627593, 75000);
+(10, 25000),
+(11, 45000),
+(12, 35000),
+(13, 15000),
+(14, 75000);
 
 INSERT INTO SHIPMENT
 VALUES
@@ -179,15 +179,20 @@ VALUES
 
 -- iii) Produce a listing: CUSTNAME, NO_OF_ORDERS, AVG_ORDER_AMT, where the middle column is the total number of orders by the customer and the last column is the average order amount for that customer
 
+SELECT CUSTOMER.Cname AS CUSTNAME, COUNT(ORDERR.Orderr) AS NO_OF_ORDERS, AVG(ORDERR.Ord_Amt) AS AVG_ORDER_AMT FROM ORDERR
+JOIN CUSTOMER ON CUSTOMER.Cust = ORDERR.Cust
+GROUP BY CUSTNAME;
 
+-- iv) List the Order# for the orders that were shipped from all the warehouses that the company has in a specific city
 
--- iv) List the Order# for the ordersthat were shipped from all the warehouses that the company has in a specific city
-
-
+SELECT Orderr AS Order_id FROM SHIPMENT
+JOIN Warehouse ON WAREHOUSE.Warehouse = SHIPMENT.Warehouse
+WHERE City = 'Kolkata';
 
 -- v) Demonstrate how you delete Item# 10 from the ITEM table and make that field null in the ORDER- ITEM table.
 
-
+DELETE FROM ITEM WHERE Item = 10;
+UPDATE ITEM SET Item = NULL WHERE ItemID = 10;
 
 -- 20. Create a table Emp(e_no, e_name, e_phone, e_addr,e_salary) to store records of 10 employees:
 
@@ -231,7 +236,7 @@ CREATE TABLE Emp(
     e_phone int(25),
     e_addr varchar(25),
     e_salary int(25),
-    CONSTRAINT fk_Emp FOREIGN KEY (e_no) REFERENCES Dept(e_no)
+    FOREIGN KEY (e_no) REFERENCES Dept(e_no)
 );
 
 -- ii) Assign dept_no as primary key.
@@ -249,3 +254,15 @@ WHERE dept_no = '100';
 
 DELETE FROM Dept
 WHERE dept_no = '110';
+
+-- 22. Solve the following queries
+
+-- i) Write a query to find the employee name and dept_hod whose dept_hod is SAY, “John”.
+
+SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS EmployeeName, dept_hod FROM employee
+WHERE dept_hod = 'John';
+
+-- ii) Write a query to find the average salary of the employee of CSE department.
+
+SELECT AVG(salary) AS Average_Salary FROM employee
+WHERE dept = 'CSE';
