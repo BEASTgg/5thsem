@@ -130,7 +130,7 @@ CREATE TABLE TEXT(
     book_title char(25),
     publisher char(25),
     author char(25)
-;)
+);
 
 -- ii) Enter atleast five tuples for each relation.
 
