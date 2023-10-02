@@ -77,7 +77,9 @@ HAVING MIN(salary) > (SELECT MIN(salary) FROM employee WHERE dept = 'Sales');
 
 -- 12. Find the employees who earn the same salary for each department.
 
-
+SELECT dept, salary FROM employee
+GROUP BY dept, salary
+HAVING COUNT(DISTINCT emp_id) > 1;
 
 -- 13. Display the employees who are not engineers and whose salary is less than that of any engineer.
 
@@ -134,7 +136,45 @@ CREATE TABLE TEXT(
 
 -- ii) Enter atleast five tuples for each relation.
 
+INSERT INTO STUDENT
+VALUES
+(10000, 'Paul', 'UG', '2023-07-24'),
+(10001, 'Deol', 'PG', '2023-06-28'),
+(10002, 'Adin', 'UG', '2023-06-09'),
+(10003, 'Andrew', 'PG', '2023-08-07'),
+(10004, 'Devin', 'UG', '2023-09-28');
 
+INSERT INTO COURSE
+VALUES
+(501, 'BTech', 'CSE'),
+(402, 'BTech', 'CSE(IOT)'),
+(603, 'BTech', 'ME'),
+(805, 'BTech', 'ECE'),
+(107, 'BTech', 'CSIT');
+
+INSERT INTO ENROLL
+VALUES
+('ABC', 501, 2, 85),
+('DEF', 402, 4, 67),
+('GHI', 603, 5, 98),
+('JKL', 805, 1, 56),
+('MNO', 107, 6, 66);
+
+INSERT INTO BOOK_ADOPTION
+VALUES
+(501, 2, 2501),
+(402, 4, 2521),
+(603, 5, 2551),
+(805, 1, 2351),
+(107, 6, 2751);
+
+INSERT INTO TEXT
+VALUES
+(2501, 'The Android Odyssey', 'R. A. Townsend Co', 'Paula'),
+(2521, 'The Unseen Threat', 'Great Woods Family Dentistry', 'Edward'),
+(2551, 'The Sorcerer Apprentice', 'Florida Sports Magazine', 'Kenway'),
+(2351, 'The Joy of Simplicity', 'Texas Section Of The Institute Of Transportation E', 'Tate'),
+(2751, 'Unraveled Mysteries', 'Com Media Llc', 'Randy');
 
 -- iii) Demonstrate how you add a new text book to the database and make this book be adopted by some department.
 
