@@ -72,7 +72,7 @@ LIMIT 1;
 
 -- 11. Display all the departments that have a minimum salary greater than that of ‘Sales’ department.
 
-SELECT dept FROM employee GROUP BY dept
+SELECT dept FROM employee GROUP BY dept                                                                             -- CHANGE SQL MODE TO LESS RESTRICTED IF ERROR CAME WHILE RUNNING THIS CODE ( USE COMMAND "SET sql_mode = '';" TO CHANGE MODE)
 HAVING MIN(salary) > (SELECT MIN(salary) FROM employee WHERE dept = 'Sales');
 
 -- 12. Find the employees who earn the same salary for each department.
