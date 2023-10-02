@@ -1,0 +1,1 @@
+### For CSci Lecture Notes & Web Resources : [Click Here](https://drive.google.com/file/d/1D5KOG13Rrv4Hf4CQH1Fl1JkASwEkHRSl/view?usp=sharing)
