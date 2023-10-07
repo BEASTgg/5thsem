@@ -77,9 +77,11 @@ HAVING MIN(salary) > (SELECT MIN(salary) FROM employee WHERE dept = 'Sales');
 
 -- 12. Find the employees who earn the same salary for each department.
 
-SELECT dept, salary FROM employee
-GROUP BY dept, salary                                              -- CHANGE SQL MODE TO LESS RESTRICTED IF ERROR CAME WHILE RUNNING THIS CODE ( USE COMMAND "SET sql_mode = '';" TO CHANGE MODE)
-HAVING COUNT(DISTINCT emp_id) > 1;
+SELECT d_name
+FROM Department
+WHERE (SELECT MIN(salary) FROM employee WHERE job_type = 'Sales') < ALL
+      (SELECT MIN(salary) FROM employee WHERE job_type = Department.d_name)
+GROUP BY d_name;
 
 -- 13. Display the employees who are not engineers and whose salary is less than that of any engineer.
 
