@@ -1,0 +1,14 @@
+- library_system
+  - includes
+    - header.php
+    - footer.php
+  - index.php
+  - add_book.php
+  - display_books.php
+  - search_books.php
+  - login.php
+  - logout.php
+  - register.php
+  - db_connection.php
+  - borrow_book.php
+  - display_borrowed_books.php
