@@ -49,7 +49,7 @@ SOFTWARE LAB 💻 -
 | 2  | [ASSIGNMENT 2](https://github.com/BEASTgg/5thsem/tree/main/SOFTWARE/ASSIGNMENT%202) |
 | 3  | [ASSIGNMENT 3](https://github.com/BEASTgg/5thsem/tree/main/SOFTWARE/ASSIGNMENT%203) |
 
-LET ME CONFIRM ASSIGNMENT 3 !
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Notes 📜 -
