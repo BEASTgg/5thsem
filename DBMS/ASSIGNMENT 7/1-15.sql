@@ -180,11 +180,61 @@ VALUES
 
 -- iii) Demonstrate how you add a new text book to the database and make this book be adopted by some department.
 
+-- Step 1: Insert the new textbook information into the "TEXT" table
+INSERT INTO TEXT (book_isbn, book_title, publisher, author)
+VALUES (2754, 'Exploring Mysteries', 'Knowledge World', 'Sophia');
 
+-- Step 2: Insert the adoption information into the "BOOK_ADOPTION" table
+INSERT INTO BOOK_ADOPTION (course_no, sem, book_isbn)
+VALUES (501, 2, 2754);
 
 -- iv) Produce a list of text books (include Course-no, book-isbn, book-title) in the alphabetical order for courses offered by the ‘Compute Science’ department that use more than two books.
 
+INSERT INTO COURSE
+VALUES (401, 'Computer Networks', 'CSE'),
+VALUES (402, 'Internet of Things', 'CSE')
 
+
+INSERT INTO BOOK_ADOPTION
+VALUES
+(401, 1, 2751),
+(401, 1, 2752),
+(401, 1, 2753),
+(402, 2, 2752),
+(402, 2, 2753);
+
+
+INSERT INTO TEXT
+VALUES
+(2751, 'Unraveled Mysteries', 'Com Media Llc', 'Randy');
+
+SELECT BA.course_no, BA.book_isbn, T.book_title
+FROM BOOK_ADOPTION BA
+JOIN TEXT T ON BA.book_isbn = T.book_isbn
+JOIN COURSE C ON BA.course_no = C.course_no
+WHERE C.dept = 'CSE'
+GROUP BY BA.course_no, BA.book_isbn, T.book_title
+HAVING COUNT(*) > 2
+ORDER BY T.book_title;
 
 -- v) List any department that has all its adopted books published by a specific publisher.
 
+INSERT INTO COURSE
+VALUES
+(701, 'Data Science', 'Computer Science');
+
+INSERT INTO BOOK_ADOPTION
+VALUES
+(701, 1, 2752);
+
+INSERT INTO BOOK_ADOPTION
+VALUES
+(701, 1, 2753);
+
+SELECT BA.course_no, C.dept
+FROM BOOK_ADOPTION BA
+JOIN TEXT T ON BA.book_isbn = T.book_isbn
+JOIN COURSE C ON BA.course_no = C.course_no
+WHERE T.publisher = 'Wonderful Press'
+GROUP BY BA.course_no, C.dept
+HAVING COUNT(*) = (SELECT COUNT(*) FROM BOOK_ADOPTION WHERE course_no = BA.course_no);
