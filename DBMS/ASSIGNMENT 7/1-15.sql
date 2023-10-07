@@ -191,8 +191,9 @@ VALUES (501, 2, 2754);
 -- iv) Produce a list of text books (include Course-no, book-isbn, book-title) in the alphabetical order for courses offered by the ‘Compute Science’ department that use more than two books.
 
 INSERT INTO COURSE
-VALUES (401, 'Computer Networks', 'CSE'),
-VALUES (402, 'Internet of Things', 'CSE')
+VALUES 
+(401, 'Computer Networks', 'CSE'),
+(402, 'Internet of Things', 'CSE');
 
 
 INSERT INTO BOOK_ADOPTION
