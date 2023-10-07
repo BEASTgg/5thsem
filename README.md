@@ -1,7 +1,3 @@
-# <img align="right" alt="SAY NO TO GPT" width="1600" src="https://i.ytimg.com/vi/hyljZFiJepc/maxresdefault.jpg">
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 For [syllabus](https://github.com/BEASTgg/5thsem/tree/main/Syllebus) click 💁‍♂️
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -66,3 +62,6 @@ SOFTWARE LAB 💻 -
 | 6 | [Signals & Systems + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Signals%20%26%20Systems) |
 | 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering ) |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# <img align="right" alt="SAY NO TO GPT" width="1600" src="https://i.ytimg.com/vi/hyljZFiJepc/maxresdefault.jpg">
