@@ -48,6 +48,7 @@ SOFTWARE LAB 💻 -
 | 1  | [ASSIGNMENT 1 - UNIQUE FOR EVERYONE DIY !] |
 | 2  | [ASSIGNMENT 2](https://github.com/BEASTgg/5thsem/tree/main/SOFTWARE/ASSIGNMENT%202) |
 | 3  | [ASSIGNMENT 3](https://github.com/BEASTgg/5thsem/tree/main/SOFTWARE/ASSIGNMENT%203) |
+| 4  | [ASSIGNMENT 4](https://github.com/BEASTgg/5thsem/tree/main/SOFTWARE/ASSIGNMENT%204) |
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
