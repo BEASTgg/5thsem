@@ -66,4 +66,4 @@ SOFTWARE LAB 💻 -
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# <img align="right" alt="SAY NO TO GPT" width="1600" src="https://i.ytimg.com/vi/hyljZFiJepc/maxresdefault.jpg">
+<img align="right" alt="SAY NO TO GPT" width="1600" src="https://i.ytimg.com/vi/hyljZFiJepc/maxresdefault.jpg">
