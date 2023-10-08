@@ -63,6 +63,10 @@ SOFTWARE LAB 💻 -
 | 5 | [Principles of Management](https://github.com/BEASTgg/5thsem/tree/main/Notes/Principles%20of%20Management/previous%20year%20notes) |
 | 6 | [Signals & Systems + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Signals%20%26%20Systems) |
 | 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering ) |
+
+
+## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1jCkZ4nmIXU-Co2KT0NdqthhhkH1LF29I/view?usp=sharing)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
