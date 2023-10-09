@@ -204,11 +204,6 @@ VALUES
 (402, 2, 2752),
 (402, 2, 2753);
 
-
-INSERT INTO TEXT
-VALUES
-(2751, 'Unraveled Mysteries', 'Com Media Llc', 'Randy');
-
 SELECT BA.course_no, BA.book_isbn, T.book_title
 FROM BOOK_ADOPTION BA
 JOIN TEXT T ON BA.book_isbn = T.book_isbn
