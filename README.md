@@ -66,7 +66,7 @@ SOFTWARE LAB 💻 -
 | 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering ) |
 
 
-## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1jCkZ4nmIXU-Co2KT0NdqthhhkH1LF29I/view?usp=sharing)
+-- ## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1jCkZ4nmIXU-Co2KT0NdqthhhkH1LF29I/view?usp=sharing)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
