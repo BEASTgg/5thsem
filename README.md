@@ -74,7 +74,7 @@ SOFTWARE LAB 💻 -
 | 6 | [Signals & Systems + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Signals%20%26%20Systems) |
 | 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering ) |
 
-## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1mNPCmUhIeBiYSEUvyHzG_JKHp4eoiGcq/view?usp=sharing)
+## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1XjsOFqfZncXrDc9RysR8f--vAP6_eF6p/view?usp=sharing)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
