@@ -141,7 +141,146 @@ WHERE c.publisher_id = 2002 ;
 -- CUSTOMER(customer-name: string, customer-street: string, customer-city: string)
 -- LOAN(loan-no: int, branch-name: string, amount: real)
 -- BORROWER(customer-name: string, loan-no: int)
+
 -- i) Create the above tables by properly specifying the primary keys and foreign keys.
+
+CREATE TABLE branch(
+    branch_name VARCHAR(15),
+    branch_city VARCHAR(15),
+    assets INT(10,2),
+    PRIMARY KEY(branch_name)
+);
+
+CREATE TABLE account(
+    accno INT(8),
+    branch_name VARCHAR(15),
+    balance INT(10,2),
+    PRIMARY KEY(accno),
+    FOREIGN KEY(branch_name) REFERENCES branch(branch_name) ON DELETE CASCADE
+);
+
+CREATE TABLE customer(
+    customer_name VARCHAR(15),
+    customer_street VARCHAR(15),
+    customer_city VARCHAR(15),
+    PRIMARY KEY(customer_name)
+);
+
+CREATE TABLE loan(
+    loan_number INT(8),
+    branch_name VARCHAR(15),
+    amount INT(10,2),
+    PRIMARY KEY(loan_number),
+    FOREIGN KEY(branch_name) REFERENCES branch(branch_name)ON DELETE CASCADE
+);
+
+CREATE TABLE depositor(
+    customer_name VARCHAR(15),
+    accno INT(8),
+    PRIMARY KEY(customer_name, accno),
+    FOREIGN KEY(customer_name) REFERENCES customer(customer_name),
+    FOREIGN KEY(accno) REFERENCES account(accno)
+);
+
+CREATE TABLE borrower(
+    customer_name  VARCHAR(15),
+    loan_number INT(8),
+    PRIMARY KEY(customer_name, loan_number),
+    FOREIGN KEY(customer_name) REFERENCES customer(customer_name),
+    FOREIGN KEY(loan_number) REFERENCES loan(loan_number)
+);
+
+-- ii) Enter atleast five tuples for each relation.
+
+INSERT INTO branch
+VALUES
+('Main','c1',10000),
+('b2','c2',20000),
+('b3','c3',30000),
+('b4','c4',40000),
+('b5','c5',50000);
+
+INSERT INTO account
+VALUES
+(12,'Main',3000),
+(22,'b2',4000),
+(32,'b3',5000),
+(42,'b4',6000),
+(52,'Main',7000),
+(62,'b5',7000);
+
+INSERT INTO customers
+VALUES
+('cust1','cstreet1','c1'),
+('cust2','cstreet2','c2'),
+('cust3','cstreet3','c3'),
+('cust4','cstreet4','c4'),
+('cust5','cstreet5','c5');
+
+INSERT INTO depositor
+VALUES
+('cust1',12),
+('cust2',22),
+('cust3',32),
+('cust4',42),
+('cust1',52),
+('cust5',62);
+
+
+INSERT INTO loan
+VALUES
+(10,'Main',10000),
+(20,'b2',20000),
+(30,'b3',30000),
+(40,'b4',40000),
+(50,'b5',50000);
+
+INSERT INTO borrower
+VALUES
+('cust1',10),
+('cust2',20),
+('cust3',30),
+('cust4',40),
+('cust5',50);
+
+-- iii) Find all the customers who have atleast two accounts at the main branch.
+
+SELECT DISTINCT D.customer_name
+FROM DEPOSITOR D
+INNER JOIN ACCOUNT A ON D.accno = A.accno
+WHERE A.branch_name = 'Main'
+GROUP BY D.customer_name
+HAVING COUNT(DISTINCT A.accno) >= 2;
+
+-- iv) Find all customer who have an account at all the branches located in a specific city.
+
+SELECT DISTINCT D.customer_name
+FROM DEPOSITOR D
+WHERE NOT EXISTS (
+    SELECT B.branch_name
+    FROM BRANCH B
+    WHERE B.branch_city = 'c2'
+    AND NOT EXISTS (
+        SELECT A.accno
+        FROM ACCOUNT A
+        WHERE A.branch_name = B.branch_name
+        AND A.accno = D.accno
+    )
+);
+
+-- v) Demonstrate how t0 delete all account tuples at every branch located in specific city.
+
+
+
+-- 3. Consider the following database for ORDER PROCESSING.
+-- CUSTOMER(cust-no: int, cname: string, city: string)
+-- ORDER(orderno: int, odate: date, ord-amt: real)
+-- ORDER_ITEM(orderno: int, itemno:int, qty: int)
+-- ITEM(itemno: int, unitprice: real)
+-- SHIPMENT(orderno: int, warehouseno: int, ship-date: date)
+-- WAREHOUSE(warehouseno: int, city: string)
+
+-- i) Create the above tables by properly specifying the primary keys and the foreign keys
 
 
 
@@ -149,14 +288,32 @@ WHERE c.publisher_id = 2002 ;
 
 
 
--- iii) Find all the customers who have atleast two accounts at the main branch.
+-- iii) List the order number and ship date for all orders shipped from particular warehouse
 
+SELECT O.order_id, S.ship_date
+FROM ORDERS O
+INNER JOIN SHIPMENT S ON O.order_id = S.order_id
+INNER JOIN WAREHOUSE W ON S.warehouse_id = W.warehouse_id
+WHERE W.city = 'mumbai';
 
+-- iv) Produce a listing: customer name, no of orders, average order amount
 
--- iv) Find all customer who have an account at all the branches located in a specific city.
+SELECT
+    C.c_name AS "Customer Name",
+    COUNT(O.order_id) AS "No of Orders",
+    AVG(O.ord_amt) AS "Average Order Amount"
+FROM
+    CUSTOMER C
+LEFT JOIN
+    ORDERS O ON C.cust_id = O.cust_id
+LEFT JOIN
+    ORDER_ITEM OI ON O.order_id = OI.order_id
+GROUP BY
+    C.c_name;
 
+-- v) List the orders that were not shipped within 30 days of ordering
 
-
--- v) Demonstrate how t0 delete all account tuples at every branch located in specific city.
-
-
+SELECT O.order_id, O.o_date, S.ship_date
+FROM ORDERS O
+LEFT JOIN SHIPMENT S ON O.order_id = S.order_id
+WHERE S.ship_date IS NULL OR (S.ship_date - O.o_date) > 30;
