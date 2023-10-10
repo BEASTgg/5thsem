@@ -58,7 +58,7 @@ SOFTWARE LAB 💻 -
 
 | No  | ASSIGNMENT |
 | ------------- | ------------- |
-| 1  | [ASSIGNMENT BY CSE_3C_13](https://github.com/BEASTgg/5thsem/tree/main/Signal%20%26%20System/ASSIGNMENT%201) |
+| 1  | [ASSIGNMENT 1 BY CSE_3C_13](https://github.com/BEASTgg/5thsem/tree/main/Signal%20%26%20System/ASSIGNMENT%201) |
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
