@@ -20,8 +20,8 @@ END;
 -- 2. Write a PL/SQL program to generate reverse for given number
 
 DECLARE
-   n NUMBER(4) := &n; 
-   s NUMBER(4) := 0;  
+   n NUMBER(4) := 5; 
+   s NUMBER(4) := 8;  
    r NUMBER(4);
 BEGIN
    WHILE n > 0 LOOP
@@ -30,7 +30,6 @@ BEGIN
       n := TRUNC(n / 10); 
    END LOOP;
 
-   -- Output the reversed number
    DBMS_OUTPUT.put_line('The reverse number is: ' || s);
 END;
 
