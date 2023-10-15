@@ -16,7 +16,6 @@ BEGIN
 
    DBMS_OUTPUT.PUT_LINE('The largest number among ' || a || ', ' || b || ', and ' || c || ' is ' || largest);
 END;
-/
 
 -- 2. Write a PL/SQL program to generate reverse for given number
 
@@ -34,7 +33,6 @@ BEGIN
    -- Output the reversed number
    DBMS_OUTPUT.put_line('The reverse number is: ' || s);
 END;
-/
 
 -- 3. Write a PL/SQL program to find the factorial of a given number
 
@@ -49,10 +47,8 @@ BEGIN
 
       result := f;
    
-   -- Output the factorial
    DBMS_OUTPUT.put_line('The factorial of ' || n || ' is: ' || result);
 END;
-/
 
 -- 4. Write a PL/SQL program to check whether given number is prime or no
 
@@ -72,14 +68,13 @@ BEGIN
       END LOOP;
    END IF;
 
-   -- Output the result
    IF is_prime THEN
       DBMS_OUTPUT.put_line(n || ' is a prime number.');
    ELSE
       DBMS_OUTPUT.put_line(n || ' is not a prime number.');
    END IF;
 END;
-/
+
 
 -- 5. Write a PL/SQL program to generate Fibonacci series upto N
 
@@ -107,7 +102,6 @@ BEGIN
       b := fib;
    END LOOP;
 END;
-/
 
 -- 6.	Write a PL/SQL program for calculating sum of two numbers. [NOT WORKING]
 -- DECLARE
@@ -142,7 +136,6 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE(year_to_check || ' is not a leap year.');
     END IF;
 END;
-/
 
 -- 8.	Find the sum of the digits of a given number
 
@@ -161,7 +154,6 @@ BEGIN
 
     DBMS_OUTPUT.PUT_LINE('The sum of the digits of ' || number_to_sum || ' is ' || digit_sum);
 END;
-/
 
 -- 9.	Check the number of vowels and consonants in a given string
 
@@ -190,7 +182,6 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Number of Vowels: ' || num_vowels);
     DBMS_OUTPUT.PUT_LINE('Number of Consonants: ' || num_consonants);
 END;
-/
 
 -- 10. Count odd and even digits in a number
 
@@ -217,4 +208,3 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Number of Even Digits: ' || num_even);
     DBMS_OUTPUT.PUT_LINE('Number of Odd Digits: ' || num_odd);
 END;
-/
