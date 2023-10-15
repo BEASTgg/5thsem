@@ -282,7 +282,39 @@ WHERE NOT EXISTS (
 
 -- i) Create the above tables by properly specifying the primary keys and the foreign keys
 
+CREATE TABLE customer(
+    cust_no int(25),
+    cname char(25),
+    city char(25)
+);
 
+CREATE TABLE order(
+    orderno int(25),
+    odate date,
+    ord_amt int(25)
+);
+
+CREATE TABLE order_item(
+    orderno int(25),
+    itemno int(25),
+    qty int(25)
+);
+
+CREATE TABLE item(
+    itemno int(25),
+    unitprice int(25)
+);
+
+CREATE TABLE shipment(
+    orderno int(25),
+    warehouseno int(25),
+    ship_date date
+);
+
+CREATE TABLE warehouse(
+    warehouseno int(25),
+    city char(25)
+);
 
 -- ii) Enter atleast five tuples for each relation.
 
@@ -290,30 +322,29 @@ WHERE NOT EXISTS (
 
 -- iii) List the order number and ship date for all orders shipped from particular warehouse
 
-SELECT O.order_id, S.ship_date
+SELECT O.orderno, S.ship_date
 FROM ORDERS O
-INNER JOIN SHIPMENT S ON O.order_id = S.order_id
-INNER JOIN WAREHOUSE W ON S.warehouse_id = W.warehouse_id
+INNER JOIN SHIPMENT S ON O.orderno = S.orderno
+INNER JOIN WAREHOUSE W ON S.warehouseno = W.warehouseno
 WHERE W.city = 'mumbai';
 
 -- iv) Produce a listing: customer name, no of orders, average order amount
 
 SELECT
-    C.c_name AS "Customer Name",
-    COUNT(O.order_id) AS "No of Orders",
+    C.cname AS "Customer Name",
+    COUNT(O.orderno) AS "No of Orders",
     AVG(O.ord_amt) AS "Average Order Amount"
 FROM
     CUSTOMER C
 LEFT JOIN
-    ORDERS O ON C.cust_id = O.cust_id
-LEFT JOIN
-    ORDER_ITEM OI ON O.order_id = OI.order_id
+    ORDERS O ON C.cust_no = O.cust_no
+    ORDER_ITEM OI ON O.orderno = OI.orderno
 GROUP BY
     C.c_name;
 
 -- v) List the orders that were not shipped within 30 days of ordering
 
-SELECT O.order_id, O.o_date, S.ship_date
+SELECT O.orderno, O.odate, S.ship_date
 FROM ORDERS O
-LEFT JOIN SHIPMENT S ON O.order_id = S.order_id
-WHERE S.ship_date IS NULL OR (S.ship_date - O.o_date) > 30;
+LEFT JOIN SHIPMENT S ON O.orderno = S.orderno
+WHERE S.ship_date IS NULL OR (S.ship_date - O.odate) > 30;
