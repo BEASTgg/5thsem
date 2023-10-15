@@ -52,7 +52,7 @@ END;
 -- 4. Write a PL/SQL program to check whether given number is prime or no
 
 DECLARE
-   n NUMBER(4) := &n; -- Input number
+   n NUMBER(4) := 3;
    is_prime BOOLEAN := TRUE;  
 
 BEGIN
@@ -78,7 +78,7 @@ END;
 -- 5. Write a PL/SQL program to generate Fibonacci series upto N
 
 DECLARE
-   n NUMBER(4) := &n; 
+   n NUMBER(4) := 10; 
    a NUMBER(4) := 0;  
    b NUMBER(4) := 1;  
    fib NUMBER(4);
@@ -119,7 +119,7 @@ END;
 -- 7. Write a PL/SQL program to check the given year is leap year or not
 
 DECLARE
-    year_to_check NUMBER := &n; -- Replace with the year you want to check
+    year_to_check NUMBER := 2016;
     is_leap BOOLEAN := FALSE;
 BEGIN
     -- Check if the year is divisible by 4
@@ -139,7 +139,7 @@ END;
 -- 8.	Find the sum of the digits of a given number
 
 DECLARE
-    number_to_sum NUMBER := &n; 
+    number_to_sum NUMBER := 566; 
     digit_sum NUMBER := 0;
     temp_number NUMBER;
 BEGIN
@@ -157,7 +157,7 @@ END;
 -- 9.	Check the number of vowels and consonants in a given string
 
 DECLARE
-    input_string VARCHAR2(100) := 'Hello, World!'; -- Replace with your input string
+    input_string VARCHAR2(100) := 'Hello, World!';
     num_vowels NUMBER := 0;
     num_consonants NUMBER := 0;
     i NUMBER;
@@ -185,7 +185,7 @@ END;
 -- 10. Count odd and even digits in a number
 
 DECLARE
-    input_number NUMBER := 123456789; -- Replace with the number you want to analyze
+    input_number NUMBER := 123456789; -- 
     num_even NUMBER := 0;
     num_odd NUMBER := 0;
     temp_number NUMBER;
