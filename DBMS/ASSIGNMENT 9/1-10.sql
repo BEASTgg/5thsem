@@ -36,7 +36,7 @@ END;
 -- 3. Write a PL/SQL program to find the factorial of a given number
 
 DECLARE
-   n NUMBER(4) := &n; 
+   n NUMBER(4) := 5; 
    f NUMBER(4) := 1;  
    result NUMBER(4);
 BEGIN
