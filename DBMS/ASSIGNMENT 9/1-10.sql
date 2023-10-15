@@ -1,9 +1,9 @@
 -- 1. Write a PL/SQL program to find the largest of three numbers
 
 DECLARE
-   a NUMBER := 10; -- first number
-   b NUMBER := 20; -- second number
-   c NUMBER := 15; -- third number
+   a NUMBER := 10;
+   b NUMBER := 20;
+   c NUMBER := 15;
    largest NUMBER;
 BEGIN
    IF (a >= b) AND (a >= c) THEN
