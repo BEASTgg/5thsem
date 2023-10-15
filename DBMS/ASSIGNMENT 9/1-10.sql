@@ -103,18 +103,15 @@ BEGIN
 END;
 
 -- 6.	Write a PL/SQL program for calculating sum of two numbers. [NOT WORKING]
--- DECLARE
---    num1 NUMBER(4) := &num1; -- Input for the first number, provide a value when prompted
---    num2 NUMBER(4) := &num2; -- Input for the second number, provide a value when prompted
---    sum NUMBER(4);
 
--- BEGIN
---    sum := num1 + num2; -- Calculate the sum
-
---    -- Output the result
---    DBMS_OUTPUT.put_line('The sum of ' || num1 || ' and ' || num2 || ' is: ' || sum);
--- END;
--- /
+DECLARE
+    num1 NUMBER := 10;
+    num2 NUMBER := 20;
+    sum_result NUMBER;
+BEGIN
+    sum_result := num1 + num2;
+    DBMS_OUTPUT.PUT_LINE('The sum of ' || num1 || ' and ' || num2 || ' is: ' || sum_result);
+END;
 
 -- 7. Write a PL/SQL program to check the given year is leap year or not
 
