@@ -268,9 +268,6 @@ WHERE NOT EXISTS (
     )
 );
 
--- v) Demonstrate how t0 delete all account tuples at every branch located in specific city.
-
-
 
 -- 3. Consider the following database for ORDER PROCESSING.
 -- CUSTOMER(cust-no: int, cname: string, city: string)
@@ -318,7 +315,53 @@ CREATE TABLE warehouse(
 
 -- ii) Enter atleast five tuples for each relation.
 
+INSERT INTO customer
+VALUES
+(100, 'Alex', 'Kolkata'),
+(101, 'Mason', 'Delhi'),
+(102, 'Ghost', 'Noida'),
+(103, 'Antonio', 'Carol Bagh'),
+(104, 'Sokolov', 'Noida');
 
+INSERT INTO order
+VALUES
+(990, '2023-06-09', 'Kolkata'),
+(991, '2023-01-12', 'Delhi'),
+(992, '2023-05-05', 'Noida'),
+(993, '2023-06-23', 'Carol Bagh'),
+(994, '2023-03-10', 'Noida');
+
+INSERT INTO order_item
+VALUES
+(990, 500, 5),
+(991, 501, 15),
+(992, 502, 10),
+(993, 503, 2),
+(994, 504, 3);
+
+INSERT INTO item
+VALUES
+(500, 25),
+(501, 50),
+(502, 75),
+(503, 100),
+(504, 125);
+
+INSERT INTO shipment
+VALUES
+(900, 5, '2023-06-27'),
+(901, 10, '2023-05-27'),
+(902, 15, '2023-04-19'),
+(903, 20, '2023-01-30'),
+(904, 25, '2023-07-08');
+
+INSERT INTO warehouse
+VALUES
+(5, 'Kolkata'),
+(10, 'Delhi'),
+(15, 'Noida'),
+(20, 'Carol Bagh'),
+(25, 'Noida');
 
 -- iii) List the order number and ship date for all orders shipped from particular warehouse
 
