@@ -118,6 +118,8 @@ AND A.author_id IN (
 
 -- iv) Find the author of the book which has maximum sales.
 
+             --For Oracle
+
 WITH AuthorSales AS (
     SELECT C.author_id, SUM(O.quantity) AS total_sales
     FROM catalogue C
@@ -130,10 +132,24 @@ FROM author A
 JOIN AuthorSales ASales ON A.author_id = ASales.author_id
 WHERE ROWNUM = 1;
 
+              --For Mysql
+
+WITH AuthorSales AS (
+    SELECT C.author_id, SUM(O.quantity) AS total_sales
+    FROM catalogue C
+    JOIN orderdetails O ON C.book_id = O.book_id
+    GROUP BY C.author_id
+    ORDER BY SUM(O.quantity) DESC
+)
+SELECT A.author_id, A.author_name
+FROM author A
+JOIN AuthorSales ASales ON A.author_id = ASales.author_id
+LIMIT 1;
+
 -- v) Demonstrate how to increase price of books published by specific publisher by 10%
 
 UPDATE catalogue c
-SET c.price = c.price * 1.1
+SET c.price = c.price + (c.price * 0.1)
 WHERE c.publisher_id = 2002 ;
 
 -- 2. Consider the following database for BANK.
