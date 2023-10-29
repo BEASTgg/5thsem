@@ -163,33 +163,29 @@ WHERE c.publisher_id = 2002 ;
 -- i) Create the above tables by properly specifying the primary keys and foreign keys.
 
 CREATE TABLE branch(
-    branch_name VARCHAR(15),
+    branch_name VARCHAR(15) NOT NULL PRIMARY KEY,
     branch_city VARCHAR(15),
-    assets INT(10,2),
-    PRIMARY KEY(branch_name)
+    assets INT(10)
 );
 
 CREATE TABLE account(
-    accno INT(8),
+    accno INT(8) NOT NULL PRIMARY KEY,
     branch_name VARCHAR(15),
-    balance INT(10,2),
-    PRIMARY KEY(accno),
+    balance INT(10),
     FOREIGN KEY(branch_name) REFERENCES branch(branch_name) ON DELETE CASCADE
 );
 
 CREATE TABLE customer(
-    customer_name VARCHAR(15),
+    customer_name VARCHAR(15) NOT NULL PRIMARY KEY,
     customer_street VARCHAR(15),
-    customer_city VARCHAR(15),
-    PRIMARY KEY(customer_name)
+    customer_city VARCHAR(15)
 );
 
 CREATE TABLE loan(
-    loan_number INT(8),
+    loan_number INT(8) NOT NULL PRIMARY KEY,
     branch_name VARCHAR(15),
-    amount INT(10,2),
-    PRIMARY KEY(loan_number),
-    FOREIGN KEY(branch_name) REFERENCES branch(branch_name)ON DELETE CASCADE
+    amount INT(10),
+    FOREIGN KEY(branch_name) REFERENCES branch(branch_name) ON DELETE CASCADE
 );
 
 CREATE TABLE depositor(
@@ -227,7 +223,7 @@ VALUES
 (52,'Main',7000),
 (62,'b5',7000);
 
-INSERT INTO customers
+INSERT INTO customer
 VALUES
 ('cust1','cstreet1','c1'),
 ('cust2','cstreet2','c2'),
@@ -302,7 +298,7 @@ CREATE TABLE customer(
     city char(25)
 );
 
-CREATE TABLE order(
+CREATE TABLE orders(
     orderno int(25),
     odate date,
     ord_amt int(25)
@@ -340,13 +336,13 @@ VALUES
 (103, 'Antonio', 'Carol Bagh'),
 (104, 'Sokolov', 'Noida');
 
-INSERT INTO order
+INSERT INTO orders
 VALUES
-(990, '2023-06-09', 'Kolkata'),
-(991, '2023-01-12', 'Delhi'),
-(992, '2023-05-05', 'Noida'),
-(993, '2023-06-23', 'Carol Bagh'),
-(994, '2023-03-10', 'Noida');
+(990, '2023-06-09', 25000),
+(991, '2023-01-12', 28000),
+(992, '2023-05-05', 2000),
+(993, '2023-06-23', 1200),
+(994, '2023-03-10', 4050);
 
 INSERT INTO order_item
 VALUES
@@ -386,7 +382,7 @@ SELECT O.orderno, S.ship_date
 FROM ORDERS O
 INNER JOIN SHIPMENT S ON O.orderno = S.orderno
 INNER JOIN WAREHOUSE W ON S.warehouseno = W.warehouseno
-WHERE W.city = 'mumbai';
+WHERE W.city = 'Noida';
 
 -- iv) Produce a listing: customer name, no of orders, average order amount
 
@@ -394,17 +390,14 @@ SELECT
     C.cname AS "Customer Name",
     COUNT(O.orderno) AS "No of Orders",
     AVG(O.ord_amt) AS "Average Order Amount"
-FROM
-    CUSTOMER C
-LEFT JOIN
-    ORDERS O ON C.cust_no = O.cust_no
-    ORDER_ITEM OI ON O.orderno = OI.orderno
-GROUP BY
-    C.c_name;
+FROM CUSTOMER C
+LEFT JOIN ORDERS O ON C.cust_no = O.cust_no
+LEFT JOIN ORDER_ITEM OI ON O.orderno = OI.orderno
+GROUP BY C.c_name;
 
 -- v) List the orders that were not shipped within 30 days of ordering
 
 SELECT O.orderno, O.odate, S.ship_date
 FROM ORDERS O
 LEFT JOIN SHIPMENT S ON O.orderno = S.orderno
-WHERE S.ship_date IS NULL OR (S.ship_date - O.odate) > 30;
+WHERE S.ship_date IS NULL OR (DATEDIFF(S.ship_date , O.o_date)) > 30;
