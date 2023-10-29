@@ -114,6 +114,7 @@ AND A.author_id IN (
        AND AVG(B1.Price) < (
            SELECT AVG(Price) FROM Catalogue
        )
+);
 
 -- iv) Find the author of the book which has maximum sales.
 
@@ -124,17 +125,16 @@ WITH AuthorSales AS (
     GROUP BY C.author_id
     ORDER BY SUM(O.quantity) DESC
 )
-
--- v) Demonstrate how to increase price of books published by specific publisher by 10%
-
 SELECT A.author_id, A.author_name
 FROM author A
 JOIN AuthorSales ASales ON A.author_id = ASales.author_id
 WHERE ROWNUM = 1;
-v) UPDATE catalogue c
+
+-- v) Demonstrate how to increase price of books published by specific publisher by 10%
+
+UPDATE catalogue c
 SET c.price = c.price * 1.1
 WHERE c.publisher_id = 2002 ;
-
 
 -- 2. Consider the following database for BANK.
 -- BRANCH(branch-name: string, branch-city: string, assets: real)
