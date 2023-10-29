@@ -59,7 +59,7 @@ VALUES
 (1004,'Dan Brown','California','USA'),
 (1005,'Ana Huang','New york','USA');
  
-INSERT INTO publisher_city
+INSERT INTO publisher
 VALUES
 (2001,'Bloomsbury','London','England'),
 (2002,'Scholastic','Washington','USA'),
@@ -78,6 +78,7 @@ VALUES
 
  
 INSERT INTO catalogue
+VALUES
 (4001,'HP and Goblet Of Fire',1001,2001,3001,2002,600),
 (4002,'HP and Order Of Phoenix',1001,2002,3001,2005,650),
 (4003,'Two States',1002,2004,3001,2009,65),
@@ -88,6 +89,7 @@ INSERT INTO catalogue
 
 
 INSERT INTO orderdetails
+VALUES
 (5001,4001,5),
 (5002,4002,7),
 (5003,4003,15),
@@ -267,7 +269,6 @@ WHERE NOT EXISTS (
         AND A.accno = D.accno
     )
 );
-
 
 -- 3. Consider the following database for ORDER PROCESSING.
 -- CUSTOMER(cust-no: int, cname: string, city: string)
