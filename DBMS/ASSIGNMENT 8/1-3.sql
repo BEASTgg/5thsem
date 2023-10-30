@@ -400,4 +400,4 @@ GROUP BY C.c_name;
 SELECT O.orderno, O.odate, S.ship_date
 FROM ORDERS O
 LEFT JOIN SHIPMENT S ON O.orderno = S.orderno
-WHERE S.ship_date IS NULL OR (DATEDIFF(S.ship_date , O.o_date)) > 30;
+WHERE S.ship_date IS NULL OR (DATEDIFF(S.ship_date , O.odate)) > 30;
