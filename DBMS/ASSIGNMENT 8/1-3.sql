@@ -386,14 +386,11 @@ WHERE W.city = 'Noida';
 
 -- iv) Produce a listing: customer name, no of orders, average order amount
 
-SELECT
-    C.cname AS "Customer Name",
-    COUNT(O.orderno) AS "No of Orders",
-    AVG(O.ord_amt) AS "Average Order Amount"
+SELECT C.cname AS "Customer Name", COUNT(O.orderno) AS "No of Orders", AVG(O.ord_amt) AS "Average Order Amount"
 FROM CUSTOMER C
-LEFT JOIN ORDERS O ON C.cust_no = O.cust_no
-LEFT JOIN ORDER_ITEM OI ON O.orderno = OI.orderno
-GROUP BY C.c_name;
+JOIN ORDERS O ON C.cust_no = O.cust_no                 -- joining here is difficult finding solution still now !
+JOIN ORDER_ITEM OI ON O.orderno = OI.orderno
+GROUP BY C.cname;
 
 -- v) List the orders that were not shipped within 30 days of ordering
 
