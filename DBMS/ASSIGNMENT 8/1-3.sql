@@ -388,7 +388,7 @@ WHERE W.city = 'Noida';
 
 SELECT C.cname AS "Customer Name", COUNT(O.orderno) AS "No of Orders", AVG(O.ord_amt) AS "Average Order Amount"
 FROM CUSTOMER C
-JOIN ORDERS O ON C.cust_no = O.cust_no                 -- joining here is difficult finding solution still now !
+JOIN ORDERS O ON C.cust_no = O.cust_no
 JOIN ORDER_ITEM OI ON O.orderno = OI.orderno
 GROUP BY C.cname;
 
