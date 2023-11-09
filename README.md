@@ -78,7 +78,7 @@ SOFTWARE LAB 💻 -
 
 ## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1XjsOFqfZncXrDc9RysR8f--vAP6_eF6p/view?usp=sharing)
 
-## There is no yt videos for digital forensics ( FOR IOT) so the only souce is [THIS](https://github.com/BEASTgg/5thsem/tree/main/Notes/Digital%20Forensics%20(FOR%20IOT%20ONLY)) notes ( might be incomplete ). 
+## There is no yt videos for digital forensics (FOR IOT) so the only souce is [THIS](https://github.com/BEASTgg/5thsem/tree/main/Notes/Digital%20Forensics%20(FOR%20IOT%20ONLY)) notes ( might be incomplete ). 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
