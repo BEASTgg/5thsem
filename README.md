@@ -1,4 +1,4 @@
-## NOTICE - THIS REPO WILL BE MADE PRIVATE FROM 21st TO 28th OF NOV !! :careful:
+## NOTICE - THIS REPO WILL BE MADE PRIVATE FROM 21st TO 28th OF NOV !!
 
 For [syllabus](https://github.com/BEASTgg/5thsem/tree/main/Syllebus) click 💁‍♂️
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
