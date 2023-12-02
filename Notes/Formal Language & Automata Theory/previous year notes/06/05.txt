@@ -1,0 +1,35 @@
+1. Multiple track Turing Machine:
+
+A k-tack Turing machine(for some k>0) has k-tracks and one R/W head that reads and writes all of them one by one.
+A k-track Turing Machine can be simulated by a single track Turing machine
+2. Two-way infinite Tape Turing Machine:
+
+Infinite tape of two-way infinite tape Turing machine is unbounded in both directions left and right.
+Two-way infinite tape Turing machine can be simulated by one-way infinite Turing machine(standard Turing machine).
+
+3. Multi-tape Turing Machine:
+It has multiple tapes and controlled by a single head.
+The Multi-tape Turing machine is different from k-track Turing machine but expressive power is same.
+Multi-tape Turing machine can be simulated by single-tape Turing machine.
+
+4. Multi-tape Multi-head Turing Machine:
+The multi-tape Turing machine has multiple tapes and multiple heads
+Each tape controlled by separate head
+Multi-Tape Multi-head Turing machine can be simulated by standard Turing machine.
+
+5. Multi-dimensional Tape Turing Machine:
+
+It has multi-dimensional tape where head can move any direction that is left, right, up or down.
+Multi dimensional tape Turing machine can be simulated by one-dimensional Turing machine
+
+6. Multi-head Turing Machine:
+
+A multi-head Turing machine contain two or more heads to read the symbols on the same tape.
+In one step all the heads sense the scanned symbols and move or write independently.
+Multi-head Turing machine can be simulated by single head Turing machine.
+
+7. Non-deterministic Turing Machine:
+
+A non-deterministic Turing machine has a single, one way infinite tape.
+For a given state and input symbol has atleast one choice to move (finite number of choices for the next move), each choice several choices of path that it might follow for a given input string.
+A non-deterministic Turing machine is equivalent to deterministic Turing machine.

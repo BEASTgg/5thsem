@@ -19,7 +19,9 @@ Since ≡L is an equivalence relation over ∑*, ≡L partitions ∑* into disjo
 
 Myhill Nerode Theorem :
 
-A language is regular if and only if ≡L partitions ∑* into finitely many equivalence classes. If ≡L partitions ∑* into n equivalence classes, then a minimal DFA recognizing L has exactly n states. 
+A language is regular if and only if ≡L partitions ∑* into finitely many equivalence classes. 
+
+If ≡L partitions ∑* into n equivalence classes, then a minimal DFA recognizing L has exactly n states. 
 
 Example :
 
