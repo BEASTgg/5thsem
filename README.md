@@ -75,7 +75,7 @@ SOFTWARE LAB 💻 -
 | 5 | [Principles of Management](https://github.com/BEASTgg/5thsem/tree/main/Notes/Principles%20of%20Management/previous%20year%20notes) |
 | 6 | [Signals & Systems + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Signals%20%26%20Systems) |
 | 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering) |
-| 9 | [Digital Forencis (FOR IOT ONLY)](https://github.com/BEASTgg/5thsem/tree/main/Notes/Digital%20Forensics%20(FOR%20IOT%20ONLY)) |
+| 9 | [Digital Forensics (FOR IOT ONLY)](https://github.com/BEASTgg/5thsem/tree/main/Notes/Digital%20Forensics%20(FOR%20IOT%20ONLY)) |
 
 ## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1XjsOFqfZncXrDc9RysR8f--vAP6_eF6p/view?usp=sharing)
 
