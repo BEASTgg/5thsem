@@ -66,7 +66,7 @@ SOFTWARE LAB 💻 -
 
 ## Question Papers
 
-| Term  | Link |
+| No  | Link |
 | ------------- | ------------- |
 | 1  | [TERM 1](https://github.com/BEASTgg/5thsem/tree/main/Question%20Papers/Term%201) |
 | 2  | [TERM 2](https://github.com/BEASTgg/5thsem/tree/main/Question%20Papers/Term%202) |
