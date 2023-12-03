@@ -86,7 +86,7 @@ SOFTWARE LAB 💻 -
 | 7 | [Software Engineering + Books](https://github.com/BEASTgg/5thsem/tree/main/Notes/Software%20Engineering) |
 | 9 | [Digital Forensics (FOR IOT ONLY)](https://github.com/BEASTgg/5thsem/tree/main/Notes/Digital%20Forensics%20(FOR%20IOT%20ONLY)) |
 
-## UPDATED NOTES FOR IOT DIGITAL FORENSICS !
+## UPDATED NOTES FOR IOT [DIGITAL FORENSICS](https://github.com/BEASTgg/5thsem/tree/main/Notes/Digital%20Forensics%20(FOR%20IOT%20ONLY))!
 
 ## For YouTube Channels : [Click Here](https://drive.google.com/file/d/1XjsOFqfZncXrDc9RysR8f--vAP6_eF6p/view?usp=sharing)
 
