@@ -1,3 +1,7 @@
+# NEW REPO IS READY FOR *[6Th SEM](https://github.com/BEASTgg/6thsem)* KEEP IT STARED FOR FUTURE ASSIGNMENTS !
+
+
+
 For [syllabus](https://github.com/BEASTgg/5thsem/tree/main/Syllebus) click 💁‍♂️
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
