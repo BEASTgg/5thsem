@@ -1,4 +1,4 @@
-# NEW REPO IS READY FOR *[6Th SEM](https://github.com/BEASTgg/6thsem)* KEEP IT STARED FOR FUTURE ASSIGNMENTS !
+# NEW REPO IS READY FOR **[6Th SEM](https://github.com/BEASTgg/6thsem)** KEEP IT STARED FOR FUTURE ASSIGNMENTS !
 
 
 
