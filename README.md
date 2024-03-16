@@ -1,4 +1,4 @@
-# GO TO THE NEW **[6Th SEM](https://github.com/BEASTgg/6thsem)** REPO . KEEP IT STARED FOR UPCOMING ASSIGNMENTS !
+# GO TO THE NEW **[6thsem](https://github.com/BEASTgg/6thsem)** REPO . KEEP IT STARED FOR UPCOMING ASSIGNMENTS !
 
 
 
